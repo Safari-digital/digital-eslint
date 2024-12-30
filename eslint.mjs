@@ -1,6 +1,6 @@
 import js from '@eslint/js';
 import ts from 'typescript-eslint';
-import prettierConfig from 'eslint-config-prettier';
+import stylistic from '@stylistic/eslint-plugin';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import importsPlugin from 'eslint-plugin-import';
 
@@ -8,6 +8,16 @@ import importsPlugin from 'eslint-plugin-import';
 export default [
     js.configs.recommended,
     ...ts.configs.recommended,
+    stylistic.configs.customize({
+        indent: 4,
+        quotes: 'single',
+        semi: true,
+        jsx: true,
+        arrowParens: false,
+        braceStyle: '1tbs',
+        commaDangle: 'always-multiline',
+        quoteProps: "as-needed",
+    }),
     {
         files: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.js', 'src/**/*.jsx'],
         languageOptions: {
@@ -22,7 +32,15 @@ export default [
             import: importsPlugin,
         },
         rules: {
-            ...prettierConfig.rules,
+            '@stylistic/max-len': ['warn', {
+                code: 120,
+                ignoreUrls: true,
+                ignoreStrings: true,
+                ignoreTemplateLiterals: true,
+                ignoreRegExpLiterals: true,
+                ignoreComments: true,
+            }],
+            '@stylistic/no-trailing-spaces': 'off',
             'no-nested-ternary': 'error',
             'no-undef': 'off',
             '@typescript-eslint/prefer-for-of': 'warn',
@@ -35,6 +53,8 @@ export default [
             '@typescript-eslint/no-namespace': 'off',
             '@typescript-eslint/no-empty-interface': 'off',
             '@typescript-eslint/ban-ts-comment': 'off',
+            "react-hooks/rules-of-hooks": "error",
+            "react-hooks/exhaustive-deps": "error",
             'import/no-duplicates': [
                 'error',
                 {

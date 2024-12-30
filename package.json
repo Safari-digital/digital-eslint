@@ -4,27 +4,26 @@
     "description": "Digital eslint/prettier configuration.",
     "author": "Safari-digital",
     "license": "MIT",
-    "main": "package/index.mjs",
+    "main": "eslint.mjs",
     "devDependencies": {
         "@eslint/js": "^9",
+        "@rollup/plugin-commonjs": "^28.0.2",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^16.0.0",
+        "@stylistic/eslint-plugin": "^2",
         "eslint": "^9",
-        "eslint-config-prettier": "^9",
         "eslint-plugin-import": "^2",
-        "eslint-plugin-prettier": "^5",
         "eslint-plugin-react": "^7",
         "eslint-plugin-react-hooks": "^5",
-        "prettier": "^3",
         "typescript-eslint": "^8"
     },
     "peerDependencies": {
         "@eslint/js": "^9",
+        "@stylistic/eslint-plugin": "^2",
         "eslint": "^9",
-        "eslint-config-prettier": "^9",
         "eslint-plugin-import": "^2",
-        "eslint-plugin-prettier": "^5",
         "eslint-plugin-react": "^7",
         "eslint-plugin-react-hooks": "^5",
-        "prettier": "^3",
         "typescript-eslint": "^8"
     }
 }

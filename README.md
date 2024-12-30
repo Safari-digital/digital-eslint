@@ -20,7 +20,7 @@ npm i -D github:Safari-digital/digital-lint-config
 ```
 #### Install peer dependencies
 ```
-npm i -D eslint typescript-eslint @eslint/js eslint-config-prettier eslint-plugin-import eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+npm i -D eslint typescript-eslint @eslint/js @stylistic/eslint-plugin eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 ## Usage
@@ -29,10 +29,4 @@ Create a `eslint.config.mjs` file in the root of your project and add the follow
 ```js
 import { eslintConfig } from 'digital-lint-config';
 export default eslintConfig;
-```
-
-#### Prettier
-Add the following line to your `package.json` file:
-```json
-    "prettier": "digital-lint-config/package/prettier.mjs"
 ```
