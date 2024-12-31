@@ -7,9 +7,9 @@
     "main": "eslint.mjs",
     "devDependencies": {
         "@eslint/js": "^9",
-        "@rollup/plugin-commonjs": "^28.0.2",
-        "@rollup/plugin-json": "^6.1.0",
-        "@rollup/plugin-node-resolve": "^16.0.0",
+        "@rollup/plugin-commonjs": "latest",
+        "@rollup/plugin-json": "latest",
+        "@rollup/plugin-node-resolve": "latest",
         "@stylistic/eslint-plugin": "^2",
         "eslint": "^9",
         "eslint-plugin-import": "^2",
