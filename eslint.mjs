@@ -48,6 +48,7 @@ export default [
             '@typescript-eslint/no-empty-function': ['warn', { allow: [] }],
             '@typescript-eslint/consistent-type-definitions': 'warn',
             '@typescript-eslint/consistent-type-imports': 'warn',
+            '@typescript-eslint/no-empty-object-type': 'off',
             '@typescript-eslint/no-inferrable-types': 'off',
             '@typescript-eslint/no-explicit-any': 'off',
             '@typescript-eslint/no-namespace': 'off',
