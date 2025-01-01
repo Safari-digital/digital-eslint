@@ -19,7 +19,16 @@ export default [
         quoteProps: "as-needed",
     }),
     {
-        files: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.js', 'src/**/*.jsx'],
+        files: [
+            'src/**/*.ts',
+            'src/**/*.tsx',
+            'src/**/*.js',
+            'src/**/*.jsx',
+            'packages/**/*.ts',
+            'packages/**/*.tsx',
+            'packages/**/*.js',
+            'packages/**/*.jsx',
+        ],
         languageOptions: {
             parser: ts.parser,
             parserOptions: {
@@ -40,6 +49,8 @@ export default [
                 ignoreRegExpLiterals: true,
                 ignoreComments: true,
             }],
+            '@stylistic/semi': ['warn'],
+            '@stylistic/eol-last': ['warn'],
             '@stylistic/no-trailing-spaces': 'off',
             'no-nested-ternary': 'error',
             'no-undef': 'off',
